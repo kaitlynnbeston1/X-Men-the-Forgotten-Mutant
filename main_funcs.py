@@ -33,7 +33,7 @@ def user_action(section):
     action_inp = input("Enter any of these, or \"quit\" to exit: ")
     if action_inp in menuvalues or action_inp == "quit":
         if action_inp == "quit":
-            print("Ok, goodbye.")
+            print("Ok, farewell, future X-Man.")
             sys.exit()
         else:
             return action_inp
