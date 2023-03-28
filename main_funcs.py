@@ -3,9 +3,11 @@ import sys
 
 # menus are important. Let's add them.
 menus ={
-    "main": ["walk"],
+    "main": ["walk", "character info", "inventory"],
     "walk": ["north", "south", "east", "west"],
     "yes_no": ["yes", "no"],
+    "character info": ["name", ],
+    "inventory": [],
 } 
 
 
@@ -18,8 +20,8 @@ def display_menu(name):
         print("What would you like to do? ")
     elif name == "walk":
         print("Which direction would you like to go?")
-    elif name == "quit":
-        print("Are you sure you want to quit?")
+    elif name == "character info":
+        print("What would you like to know about your character?")
     elif name == "yes_no":
         print("Which option would you like to select?")
     [print(action.title()) for action in menuvalues]
@@ -53,7 +55,7 @@ def user_action(section):
             if action_inp in menuvalues or action_inp == "quit":
                 correct = 'yes'
                 if action_inp == "quit":
-                    print("Ok, goodbye.")
+                    print("Ok, farewell, future X-Man.")
                     sys.exit()
                 else:
                     return action_inp

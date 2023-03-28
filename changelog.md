@@ -21,4 +21,11 @@ changed - Quitting message from "ok, goodbye" to "Ok, farewell, future X-Man." b
 added - weapons, descriptions, and the ability to carry said weapons.
 added - character selections.
 added - opportunity to select a hero name.
-added - a dictionary to keep track of character info. Menu coming soon.
+added - a dictionary to keep track of character info.
+
+v2.1
+fixed - The inability to quit when creating your hero.
+fixed - The fact that not all quit messages were the same. 
+added - A character submenu.
+added - ability to see what's in your inventory from the menu.
+changed - order of map tiles so the debris tiles aren't so close together.

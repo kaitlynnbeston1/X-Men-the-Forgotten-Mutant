@@ -65,7 +65,7 @@ character = {
 
 
 map = [["start", "city section", "debris", "city section"], 
-       ["boring", "city section", "debris", "boring"],
+       ["boring", "debris", "city section", "boring"],
 ["boring", "city section", "base", "debris"],
        ["debris", "city section", "boring", "blackbird"]]
 row = 0
@@ -95,6 +95,20 @@ def salvage_weapon():
         character["inventory"].append(selection)
         map[row][col] = "salvaged weapon"
 
+
+def read_inventory():
+    print("Here is your inventory:")
+    for item in character["inventory"]:
+        print(item.title())
+
+
+# Getting character info
+def get_info():
+    m.display_menu("character info")
+    catigory = m.user_action("character info")
+    if catigory in m.menus["character info"]:
+        if catigory == "name":
+            print(f"name: {character['name']} \n Hero name: {character['hero name']}")
 
 
 # Movement functions
@@ -162,14 +176,27 @@ def menu_actions(menu):
     if menu == "walk":
         move(row, col)
         location(row, col)
-    
+    elif menu == "inventory":
+        read_inventory()
+    elif menu == "character info":
+        get_info()
+
+
 print("Welcome to X-men, the Unsung Hero!")
-char_name = input("First thing's first, what is your name? ")
-print(f"Hello {char_name}, pleased to meet you!")
-character["name"] = char_name
-h_name = input("Ok, if you one day hope to join the X-Men, you'll also need a hero name. Please choose one now: ")
-print(f"{h_name}... I like it! Now, let's begin!")
-character["hero name"] = h_name
+char_name = input("First thing's first, what is your name? \n You can also enter \"quit\" to exit. \n").title()
+if char_name == "Quit":
+    print("Ok, farewell, future X-Man.")
+    sys.exit()
+else:
+    print(f"Hello {char_name}, pleased to meet you!")
+    character["name"] = char_name
+h_name = input("Ok, if you one day hope to join the X-Men, you'll also need a hero name. Please choose one now: \n You may also enter \"quit\" to exit. \n").title()
+if h_name == "Quit":
+    print("Ok, farewell, future X-Man.")
+    sys.exit()
+else:
+    print(f"{h_name}... I like it! Now, let's begin!")
+    character["hero name"] = h_name
 location(row, col)
 while True:
     act = m.main_menu()
