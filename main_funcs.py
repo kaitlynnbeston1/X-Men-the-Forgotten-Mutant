@@ -1,12 +1,16 @@
 import sys
+import movement as mo
+import inventory as i
+import weapons as w
+import your_character as yc
 
 
 # menus are important. Let's add them.
 menus ={
-    "main": ["walk", "character info", "inventory"],
+    "main": ["walk", "your character", "inventory"],
     "walk": ["north", "south", "east", "west"],
     "yes_no": ["yes", "no"],
-    "character info": ["name", ],
+    "your character": ["info", "set name", "set hero name"],
     "inventory": [],
 } 
 
@@ -20,8 +24,8 @@ def display_menu(name):
         print("What would you like to do? ")
     elif name == "walk":
         print("Which direction would you like to go?")
-    elif name == "character info":
-        print("What would you like to know about your character?")
+    elif name == "your character":
+        print("Choose an action to take relating to your character.")
     elif name == "yes_no":
         print("Which option would you like to select?")
     [print(action.title()) for action in menuvalues]
@@ -69,3 +73,12 @@ def main_menu():
     return m
 
 
+# menu interactions 
+def menu_actions(menu):
+    if menu == "walk":
+        mo.move(mo.row, mo.col)
+        mo.location(mo.row, mo.col)
+    elif menu == "inventory":
+        i.read_inventory()
+    elif menu == "your character":
+        yc.char_acts()

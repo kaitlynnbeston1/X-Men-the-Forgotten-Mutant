@@ -1,5 +1,6 @@
 Changelog
-v1.0
+* Items marked with (M) are the version to be marked.
+v1.0 (M)
 Name: X-men, the Forgotten Mutant
 added - map - nested lists
 added - global variables row and col
@@ -23,9 +24,16 @@ added - character selections.
 added - opportunity to select a hero name.
 added - a dictionary to keep track of character info.
 
-v2.1
+v2.1 (M)
 fixed - The inability to quit when creating your hero.
 fixed - The fact that not all quit messages were the same. 
 added - A character submenu.
 added - ability to see what's in your inventory from the menu.
 changed - order of map tiles so the debris tiles aren't so close together.
+
+V 3.0 (M)
+fixed - functions are separated into modules.
+fixed - A bug where you could still get duplicate items. 
+changed - Refined character selection in the beginning.
+changed - The menu "character info" is now "your character."
+added - You can now change your character's name and hero name.
