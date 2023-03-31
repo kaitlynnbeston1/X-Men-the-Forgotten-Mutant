@@ -31,9 +31,13 @@ added - A character submenu.
 added - ability to see what's in your inventory from the menu.
 changed - order of map tiles so the debris tiles aren't so close together.
 
-V 3.0 (M)
+V 3.0
 fixed - functions are separated into modules.
 fixed - A bug where you could still get duplicate items. 
 changed - Refined character selection in the beginning.
 changed - The menu "character info" is now "your character."
 added - You can now change your character's name and hero name.
+
+V3.1 (M)
+fixed - All functions have docstrings now in order to conform to pep-8.
+added - A header to the unsung_hero.py file.

@@ -23,6 +23,7 @@ def set_name():
         print(f"Your name has been set to {char_name}")
 
 def set_hero_name():
+    """Sets the player's hero name."""
     h_name = input("Please choose a hero name. \n You may also enter \"quit\" to exit.\n").title()
     if h_name == "Quit":
         print("Ok, farewell, future X-Man.")

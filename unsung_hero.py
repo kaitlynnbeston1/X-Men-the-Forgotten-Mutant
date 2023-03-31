@@ -1,10 +1,20 @@
+"""
+Title: X-Men, the Unsung Hero
+Class: CS30
+Date: 31/03/2023
+Coder's name: Kaitlynn Beston
+Version: 3.1
+"""
+
+
+# imports
 import main_funcs as m
 import movement as mo
 import your_character as yc
 
 
 
-# Combining all of these elements to create a working game.
+# Main code
 print("Welcome to X-men, the Unsung Hero!")
 print("Before you begin your journey to become an X-Man, there's some information I'll need to know.")
 yc.set_name()

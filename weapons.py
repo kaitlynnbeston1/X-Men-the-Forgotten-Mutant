@@ -3,7 +3,7 @@ import random
 import inventory as i
 import movement as mo 
 
-
+# global variables
 weapons = {
     "lockheed": {
     "description": "Not a weapon, but a creature who will loyally fight alongside you. \n A purple alien dragon who is capable of incredible flame attacks.",
@@ -37,11 +37,11 @@ weapon_list = list(weapons.keys())
 
 # Functions.
 def describe_weapon(name):
-    """Describes chosen weapon."""
+    """Describes chosen weapon to the user."""
     if name in weapon_list:
         print(weapons[name]["description"])
     else:
-        print(f"It appears the programmer who made this game didn't add the weapon {name} to the game. Contact them, or be more careful how you enter words, I suppose.")
+        print(f"It appears the programmer who made this game didn't add the weapon {name} to the game. I'd recommend getting in contact with them.")
 
 
 def salvage_weapon():

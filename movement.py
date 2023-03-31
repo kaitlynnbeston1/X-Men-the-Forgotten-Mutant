@@ -33,6 +33,8 @@ map = [["start", "city section", "debris", "city section"],
        ["boring", "debris", "city section", "boring"],
 ["boring", "city section", "base", "debris"],
        ["debris", "city section", "boring", "blackbird"]]
+
+
 row = 0
 col = 0
 
@@ -86,7 +88,9 @@ def move(r, c):
 
 # Location printing and interaction.
 def location(r, c):
-    """Describes the location at which the user has landed."""
+    """Describes the location at which the user has landed.
+    Also enables interactions with various locations.
+    r and c represent user coordenates."""
     map_location = map[r][c]
     if map_location in map_tiles.keys():
         print(map_tiles[map_location]["description"])

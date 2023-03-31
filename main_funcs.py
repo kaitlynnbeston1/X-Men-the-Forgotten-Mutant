@@ -75,6 +75,7 @@ def main_menu():
 
 # menu interactions 
 def menu_actions(menu):
+    """Enables menu interaction."""
     if menu == "walk":
         mo.move(mo.row, mo.col)
         mo.location(mo.row, mo.col)
