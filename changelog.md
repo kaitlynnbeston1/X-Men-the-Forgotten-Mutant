@@ -38,6 +38,9 @@ changed - Refined character selection in the beginning.
 changed - The menu "character info" is now "your character."
 added - You can now change your character's name and hero name.
 
-V3.1 (M)
+V3.1
 fixed - All functions have docstrings now in order to conform to pep-8.
 added - A header to the unsung_hero.py file.
+
+V3.2 (M)
+changed - Map now prints to an external file.

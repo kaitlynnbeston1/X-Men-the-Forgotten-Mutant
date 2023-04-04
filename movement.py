@@ -33,13 +33,31 @@ map = [["start", "city section", "debris", "city section"],
        ["boring", "debris", "city section", "boring"],
 ["boring", "city section", "base", "debris"],
        ["debris", "city section", "boring", "blackbird"]]
-
+            
 
 row = 0
 col = 0
 
 
 # Functions.
+def print_map():
+    """Prints map to external file"""
+    num = 0
+    with open("printed_map.txt", "w") as f:
+        f.write("Tile legend: \n")
+        for title, dict in map_tiles.items():
+            f.write(f"{title} \n")
+            for d, description in dict.items():
+                f.write(f"{d} \n")
+                f.write(f"{description} \n")
+        f.write("Map: \n")
+        for t in map:
+            num += 1
+            f.write(f"row {num}: \n")
+            for index in t:
+                f.write(f"{index} \n")
+        
+
 # Movement function.
 def move(r, c):
     """Function which moves your character on the game's map. 
@@ -98,7 +116,7 @@ def location(r, c):
             m.display_menu("yes_no")
             story = m.user_action("yes_no")
             if story == "yes":
-                print(f"This city has been destroyed when Magneto, a dangerous mutant terrorist had attempted to take over before being stopped by the X-men. \n {character['hero name']}, it is your job to track down Magneto's secret base and end this once and for all. \n Secrets lie within this city, such as weapons or enimy encounters. \n Some may help, while others may hinder your progress.")
+                print(f"This city has been destroyed when Magneto, a dangerous mutant terrorist had attempted to take over before being stopped by the X-men. \n {yc.character['hero name']}, it is your job to track down Magneto's secret base and end this once and for all. \n Secrets lie within this city, such as weapons or enimy encounters. \n Some may help, while others may hinder your progress.")
             elif story == "no":
                 print("Ok, you may continue on your way.")
         elif map_location == "debris":

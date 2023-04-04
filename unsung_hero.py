@@ -7,7 +7,6 @@ Version: 3.1
 """
 
 
-# imports
 import main_funcs as m
 import movement as mo
 import your_character as yc
@@ -15,6 +14,7 @@ import your_character as yc
 
 
 # Main code
+mo.print_map()
 print("Welcome to X-men, the Unsung Hero!")
 print("Before you begin your journey to become an X-Man, there's some information I'll need to know.")
 yc.set_name()
