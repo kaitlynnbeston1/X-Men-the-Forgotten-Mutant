@@ -44,3 +44,8 @@ added - A header to the unsung_hero.py file.
 
 V3.2 (M)
 changed - Map now prints to an external file.
+
+V4.0 (M)
+changed - Menus are now separate from the main functions
+aded - character creation is now separate from the game code
+added - save feature which uses try, accept, else, finally

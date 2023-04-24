@@ -1,6 +1,8 @@
 # imports
 import main_funcs as m
+import menus as me
 import weapons as w
+import your_character as yc
 
 
 # global variables.
@@ -67,7 +69,7 @@ def move(r, c):
     global col
     selecting = True
     while selecting:
-        m.display_menu("walk")
+        me.display_menu("walk")
         dir = m.user_action("walk") 
         if dir == "north":
             if r+1 == len(map[r]):
@@ -113,7 +115,7 @@ def location(r, c):
     if map_location in map_tiles.keys():
         print(map_tiles[map_location]["description"])
         if map_location == "start":
-            m.display_menu("yes_no")
+            me.display_menu("yes_no")
             story = m.user_action("yes_no")
             if story == "yes":
                 print(f"This city has been destroyed when Magneto, a dangerous mutant terrorist had attempted to take over before being stopped by the X-men. \n {yc.character['hero name']}, it is your job to track down Magneto's secret base and end this once and for all. \n Secrets lie within this city, such as weapons or enimy encounters. \n Some may help, while others may hinder your progress.")

@@ -1,6 +1,8 @@
 # imports
-import main_funcs as m
 import sys
+
+import main_funcs as m
+import menus as me
 
 
 # global variables
@@ -33,14 +35,22 @@ def set_hero_name():
         print(f"Your hero name is now {character['hero name']}.")
         
 
+# creating your character.
+def create_char():
+    print("Welcome to X-men, the Unsung Hero!")
+    print("Before you begin your journey to become an X-Man, there's some information I'll need to know.")
+    set_name()
+    set_hero_name()
+    print(f"Pleased to meet you, {character['name']}... Or should I say, {character['hero name']}. \n Now, let your quest begin!")
+
 
 # function to interact with character menu
 def char_acts():
     """Allows you to interact with your character.
     Changing their name, seeing info, etc."""
-    m.display_menu("your character")
+    me.display_menu("your character")
     category = m.user_action("your character")
-    if category in m.menus["your character"]:
+    if category in me.menus["your character"]:
         if category == "info":
             print(f"name: {character['name']} \n Hero name: {character['hero name']}")
         elif category == "set name":
