@@ -1,0 +1,9 @@
+Story:
+Welcome to X-men, the Unsung Hero!
+In this game, you will play as a member of the X-Men, a group of mutant heros.
+Magneto, one of the X-men's main rivals has taken over a small city in hopes of making it a city of mutants only. 
+Luckily, the X-Men have taken him down temperarily. 
+You are a mutant who lived in the city before its downfall. 
+You have always looked up to the X-Men, so you decide to help them take down this dangerous mutant. 
+Explore the land, fight enimies, and find your way back to the Blackbird.
+Then, take your place as an X-Man!

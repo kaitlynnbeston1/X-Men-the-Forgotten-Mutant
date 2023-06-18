@@ -2,9 +2,10 @@ import sys
 import os
 
 import menus as me
-import inventory as i
 import weapons as w
 import your_character as yc
+
+from player import user
 
 
 # function to save when user quits
@@ -90,9 +91,19 @@ def menu_actions(menu):
     """Enables menu interaction."""
     if menu == "walk":
         import movement as mo
-        mo.move(mo.row, mo.col)
-        mo.location(mo.row, mo.col)
+        mo.move(user.x, user.y)
+        mo.location(user.x, user.y)
     elif menu == "inventory":
-        i.read_inventory()
+        me.display_menu("inventory")
+        x = user_action("inventory")
+        if x == "show inventory":
+            user.show_inventory()
+        elif x == "use consumable":
+            user.use_cons()
     elif menu == "your character":
         yc.char_acts()
+    elif menu == "story":
+        with open("storyline.txt") as text:
+            contents = text.read()
+        print(contents)
+

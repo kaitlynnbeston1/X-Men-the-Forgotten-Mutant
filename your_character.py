@@ -1,4 +1,6 @@
 # imports
+from player import user
+
 import sys
 
 import main_funcs as m
@@ -6,10 +8,6 @@ import menus as me
 
 
 # global variables
-character = {
-    "name": "select",
-    "hero name": "select",
-    }
 
 
 # character functions
@@ -21,7 +19,7 @@ def set_name():
         print("Ok, farewell, future X-Man.")
         sys.exit()
     else:
-        character["name"] = char_name
+        user.name = char_name
         print(f"Your name has been set to {char_name}")
 
 def set_hero_name():
@@ -31,8 +29,8 @@ def set_hero_name():
         print("Ok, farewell, future X-Man.")
         sys.exit()
     else:
-        character["hero name"] = h_name
-        print(f"Your hero name is now {character['hero name']}.")
+        user.heroName = h_name
+        print(f"Your hero name is now {user.heroName}.")
         
 
 # creating your character.
@@ -41,7 +39,7 @@ def create_char():
     print("Before you begin your journey to become an X-Man, there's some information I'll need to know.")
     set_name()
     set_hero_name()
-    print(f"Pleased to meet you, {character['name']}... Or should I say, {character['hero name']}. \n Now, let your quest begin!")
+    print(f"Pleased to meet you, {user.name}... Or should I say, {user.heroName}. \n Now, let your quest begin!")
 
 
 # function to interact with character menu
@@ -52,7 +50,7 @@ def char_acts():
     category = m.user_action("your character")
     if category in me.menus["your character"]:
         if category == "info":
-            print(f"name: {character['name']} \n Hero name: {character['hero name']}")
+            print(f"name: {user.name} \n Hero name: {user.heroName}")
         elif category == "set name":
             set_name()
         elif category == "set hero name":
